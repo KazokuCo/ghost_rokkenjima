@@ -1,0 +1,27 @@
+{{!< default}}
+{{#author}}
+<div class="tag-title" {{#if cover}}style="background-image: url({{cover}})"{{/if}}>
+{{#if image}}
+<div class="authorimg"><img src="{{image}}" alt="{{name}}" class="aligncenter"/></div>
+{{/if}}
+<h1><span>POSTS BY {{name}}</span></h1>
+</div>
+{{/author}}
+<div class="blogpagesection content">
+<div class="row multicol">
+<div class="small-12 columns">
+<div class="itemContainer">
+<ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 blogitems guttermasonry">
+
+    {{#foreach posts}}
+      {{> content-post}}  
+    {{/foreach}}
+
+</ul>
+</div>
+
+      {{pagination}}  
+     
+</div>
+</div>
+</div>    

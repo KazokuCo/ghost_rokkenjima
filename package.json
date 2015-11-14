@@ -1,0 +1,14 @@
+{
+  "name": "Monologue",
+  "version": "1.3",
+  "description" : "Responsive Ghost Theme",
+  "author" : "Audemedia",
+  "homepage" : "http://audemedia.com",
+  "keywords" : [
+        "ghost",
+        "blog",
+        "masonry",
+        "responsive",
+        "infinitescroll"
+    ]
+}
