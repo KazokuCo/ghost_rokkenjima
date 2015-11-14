@@ -397,7 +397,7 @@ hr.round {
     font-size: 17px;
 }
 .social ul li a:hover {
-    color: #EB532C;
+    color: #00b6db;
 }
 /* Header ---------------------- */
 
@@ -451,7 +451,7 @@ nav.desktop-menu {
     left: 0;
     top: 0;
     width: 100%;
-    background: #303038;
+    background: #636363;
     -moz-box-shadow: none;
     box-shadow: none;
     -webkit-box-shadow: none;
@@ -463,7 +463,7 @@ nav.desktop-menu {
     color: #fff;
 }
 .f-nav .sf-menu > li:hover a {
-    color: #ccc;
+    color: 303038;
 }
 .f-nav .sf-menu li.current-menu-item a,
 .f-nav .sf-menu li.current-menu-parent a,
@@ -549,7 +549,7 @@ nav.desktop-menu {
     display: block;
     border: none;
     width: 100% !important;
-    background: #cb4624;
+    background: #00b6db;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
     transition: all 0.2s linear;
@@ -645,13 +645,13 @@ ul.sf-menu li li li.sfHover ul {
     color: #fff !important;
 }
 .sf-menu > li:hover a {
-    color: #EB532C;
+    color: #00b6db;
 }
 .sf-menu > li:hover ul li a {
     color: #fff;
 }
 .sf-menu ul {
-    background: #EB532C;
+    background: #00b6db;
     padding: 5px;
 }
 /* Titles */
