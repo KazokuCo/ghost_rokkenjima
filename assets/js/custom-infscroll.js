@@ -73,7 +73,7 @@ $container.imagesLoaded( function() {
       maxPage: parseInt($(this).data('max-page')),
       loading: {
         finishedMsg: 'ALL POSTS LOADED',
-        img: 'https://dl.dropboxusercontent.com/u/32455218/loader.png',
+        img: '/assets/images/loader.png',
         msg: null,
         msgText: '',
       },
