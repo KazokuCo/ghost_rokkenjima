@@ -1,29 +1,29 @@
 {{!< default}}
 
 <div class="tag-title">
-<div class="row">
-<div class="small-12 columns">
-     <h1><span>{{tag.name}}</span></h1>
-     {{#if tag.description}}<div class="tagdescr">{{tag.description}}</div>{{/if}}
+  <div class="row">
+    <div class="small-12 columns">
+      <h1><span>{{tag.name}}</span></h1>
+      {{#if tag.description}}<div class="tagdescr">{{tag.description}}</div>{{/if}}
+    </div>
+  </div>
 </div>
-</div>
-</div>		 
 
 <div class="blogpagesection content">
-<div class="row multicol">
-<div class="small-12 columns">
-<div class="itemContainer">
-<ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 blogitems guttermasonry">
+  <div class="row multicol">
+    <div class="small-12 columns">
+      <div class="itemContainer">
+        <ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 blogitems guttermasonry">
 
-    {{#foreach posts}}
-      {{> content-post}}  
-    {{/foreach}}
+          {{#foreach posts}}
+          {{> content-post}}
+          {{/foreach}}
 
-</ul>
-</div>
+        </ul>
+      </div>
 
-      {{pagination}}  
-     
+      {{pagination}}
+
+    </div>
+  </div>
 </div>
-</div>
-</div>    
