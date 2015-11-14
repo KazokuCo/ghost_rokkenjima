@@ -2,7 +2,7 @@
 <!--[if IE 8]>               <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
 <head>
-  {{! Document Settings }}  
+  {{! Document Settings }}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
 
@@ -12,7 +12,7 @@
 
   {{! Favicon }}
   <link rel="shortcut icon" href="/favicon.ico">
-  
+
   {{! RSS }}
   <link rel="alternate" type="application/rss+xml" title="{{@blog.title}} » Feed" href="/rss">
 
@@ -32,7 +32,7 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  
+
   ga('create', 'UA-48122982-1', 'auto');
   ga('send', 'pageview');
   </script>
@@ -42,81 +42,81 @@
 
 <body class="{{body_class}}">
 
-{{! Header }}
-{{#is "tag"}}
-<div class="header" {{#if tag.image}} style="background-image: url({{tag.image}})" {{else}} {{#if @blog.cover}} style="background-image: url({{@blog.cover}})"{{else}} {{/if}}{{/if}}>
-{{else}}
-<div class="header" {{#if @blog.cover}} style="background-image: url({{@blog.cover}})"{{/if}}>
-{{/is}}
-{{! Top Bar }}
-<div class="topbar">
-<div class="row multicol collapse">
-<div class="small-12 columns">
-  <div class="social">
-    <ul>
-      <li><a href="/twitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="/facebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="/discord" title="Discord"><img src="/discord-white.svg" class="discord-icon blur" /><img src="/discord-blue.svg" class="discord-icon hover" /></a></li>
-      <li><a href="/rss" title="RSS"><i class="fa fa-rss"></i></a></li>
-    </ul>
-      </div>
-</div>
-</div>
-</div>
-
-
-<div class="row">
-<div class="small-12 columns"> 
-    {{#if @blog.logo}}
-        <div class="logo"><a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a></div>
+  {{! Header }}
+  {{#is "tag"}}
+  <div class="header" {{#if tag.image}} style="background-image: url({{tag.image}})" {{else}} {{#if @blog.cover}} style="background-image: url({{@blog.cover}})"{{else}} {{/if}}{{/if}}>
     {{else}}
-        <div class="logotxt"><h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1></div>
-    {{/if}}
-    {{#if @blog.description}}  
-    <div class="text-center motto">{{@blog.description}}</div> 
-    {{/if}}    
-</div>
-</div>
+    <div class="header" {{#if @blog.cover}} style="background-image: url({{@blog.cover}})"{{/if}}>
+      {{/is}}
+      {{! Top Bar }}
+      <div class="topbar">
+        <div class="row multicol collapse">
+          <div class="small-12 columns">
+            <div class="social">
+              <ul>
+                <li><a href="/twitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="/facebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="/discord" title="Discord"><img src="/discord-white.svg" class="discord-icon blur" /><img src="/discord-blue.svg" class="discord-icon hover" /></a></li>
+                <li><a href="/rss" title="RSS"><i class="fa fa-rss"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-</div>
 
-{{! Navigation Menu }}
-{{navigation}}
+      <div class="row">
+        <div class="small-12 columns">
+          {{#if @blog.logo}}
+          <div class="logo"><a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a></div>
+          {{else}}
+          <div class="logotxt"><h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1></div>
+          {{/if}}
+          {{#if @blog.description}}
+          <div class="text-center motto">{{@blog.description}}</div>
+          {{/if}}
+        </div>
+      </div>
+
+    </div>
+
+    {{! Navigation Menu }}
+    {{navigation}}
 
     {{{body}}}
 
-   <footer>
-   <div class="copyright">
-    <div class="row">
-    <div class="small-12 columns">
-      <p class="text-center">Copyright 2015 Kazamatsuri.  All Rights Reserved.</p>
-    </div>
-    </div>
+    <footer>
+     <div class="copyright">
+      <div class="row">
+        <div class="small-12 columns">
+          <p class="text-center">Copyright 2015 Kazamatsuri.  All Rights Reserved.</p>
+        </div>
+      </div>
     </div>
   </footer>
   <a href="#top" id="back-to-top"><img src="{{asset "images/icons/backtop.png"}}" alt="Back to top"></a>
 
-    {{ghost_foot}}
+  {{ghost_foot}}
 
-    {{! The JavaScript files }}
-    {{! Superfish Menu }}
-    <script type="text/javascript" src="{{asset "/js/vendor/hoverIntent.min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "/js/vendor/superfish.js"}}"></script>
-    {{! Menu for Small Screens }}
-    <script type="text/javascript" src="{{asset "/js/vendor/jquery.slicknav.min.js"}}"></script>
-    {{! Social Likes }}
-    <script type="text/javascript" src="{{asset "/js/vendor/social-likes.min.js"}}"></script>
-    {{! Isotope }}
-    <script type="text/javascript" src="{{asset "/js/vendor/isotope.pkgd.js"}}"></script>
-    <script type="text/javascript" src="{{asset "/js/vendor/imagesloaded.pkgd.min.js"}}"></script>
-    {{! Conditionizr}}
-    <script type="text/javascript" src="{{asset "/js/vendor/conditionizr.min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "/js/vendor/safari.js"}}"></script>
-    <script type="text/javascript" src="{{asset "/js/vendor/windows.js"}}"></script>
-    {{! InfiniteScroll }}
-    <script type="text/javascript" src="{{asset "/js/vendor/jquery.infinitescroll.min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "/js/vendor/manual-trigger.js"}}"></script>
-     {{! Scripts Hooks }}
-    <script type="text/javascript" src="{{asset "/js/custom-infscroll.js"}}"></script>
+  {{! The JavaScript files }}
+  {{! Superfish Menu }}
+  <script type="text/javascript" src="{{asset "/js/vendor/hoverIntent.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "/js/vendor/superfish.js"}}"></script>
+  {{! Menu for Small Screens }}
+  <script type="text/javascript" src="{{asset "/js/vendor/jquery.slicknav.min.js"}}"></script>
+  {{! Social Likes }}
+  <script type="text/javascript" src="{{asset "/js/vendor/social-likes.min.js"}}"></script>
+  {{! Isotope }}
+  <script type="text/javascript" src="{{asset "/js/vendor/isotope.pkgd.js"}}"></script>
+  <script type="text/javascript" src="{{asset "/js/vendor/imagesloaded.pkgd.min.js"}}"></script>
+  {{! Conditionizr}}
+  <script type="text/javascript" src="{{asset "/js/vendor/conditionizr.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "/js/vendor/safari.js"}}"></script>
+  <script type="text/javascript" src="{{asset "/js/vendor/windows.js"}}"></script>
+  {{! InfiniteScroll }}
+  <script type="text/javascript" src="{{asset "/js/vendor/jquery.infinitescroll.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "/js/vendor/manual-trigger.js"}}"></script>
+  {{! Scripts Hooks }}
+  <script type="text/javascript" src="{{asset "/js/custom-infscroll.js"}}"></script>
 </body>
 </html>
