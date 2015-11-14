@@ -18,16 +18,17 @@ if(window.devicePixelRatio >= 1.2){
 jQuery("document").ready(function($){
   
   var nav = $('.main-nav');
+  var header = $('.header');
   
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 400) {
+    if ($(this).scrollTop() > header.height()) {
       nav.addClass("f-nav").fadeIn('fast');
     } else {
       nav.removeClass("f-nav").fadeIn('fast');
     }
   });
 
-}); 
+});
 
 // ______________ SOCIAL LIKES
 
