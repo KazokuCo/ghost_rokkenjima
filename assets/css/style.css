@@ -1597,3 +1597,80 @@ blockquote p {
         margin-top: 8px;
     }
 }
+/* -- Custom -- */
+
+.motto {
+    display: none;
+}
+.header {
+    min-height: 0;
+}
+.header .logo {
+    margin-top: 35px;
+    margin-bottom: 36px;
+}
+.header .logo img {
+    max-height: 225px;
+    width: 800px;
+}
+.content {
+    background-image: url(/content/images/2015/08/kv_04.jpg);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-size: 100%;
+    background-attachment: fixed;
+    /*padding-top: 10px;*/
+}
+.content p {
+    font-size: 15px;
+}
+.social-likes__counter {
+    color: #333;
+}
+.main-nav {
+    z-index: 9999;
+    position: absolute;
+}
+.f-nav {
+    position: fixed;
+}
+.tag-title {
+    padding-top: 80px;
+}
+@media screen and (max-width: 991px) {
+    .sf-menu a {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+.post-template article,
+.post-template .prevnext,
+.post-template .author-wrap {
+    margin-bottom: 30px;
+}
+.post-template .prevnext {
+    padding: 0 20px;
+}
+.author-wrap img {
+    max-width: 100px;
+}
+.post-template .comment {
+    background-color: #fcfcff;
+}
+.discord-icon {
+    width: 20px;
+    vertical-align: bottom;
+}
+*>.hover {
+    display: none;
+}
+*>.blur {
+    display: inherit;
+}
+*:hover>.hover {
+    display: inherit;
+}
+*:hover>.blur {
+    display: none;
+}
