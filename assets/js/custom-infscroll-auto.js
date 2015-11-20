@@ -124,9 +124,8 @@
 
   // ______________ SUPERFISH MENU
 
-  var $j = jQuery.noConflict();
-  $j(document).ready(function() {
-    $j("ul.sf-menu").superfish({
+  $(document).ready(function() {
+    $("ul.sf-menu").superfish({
       animation: { opacity:'show', height:'show' },
       delay: 300,
       speed: 'fast'
