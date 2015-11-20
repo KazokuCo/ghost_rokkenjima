@@ -56,26 +56,26 @@
 
   // ______________ ISOTOPE & INFINITE SCROLL
 
-  var $container = $('.itemContainer ul');
+  var container = $('.itemContainer ul');
 
   if (conditionizr.safari && conditionizr.windows) {
-    $container.isotope({
+    container.isotope({
       itemSelector: '.itemContainer ul li',
       layoutMode: 'masonry',
       masonry: { gutter: 15 }
     });
   } else {
-    $container.isotope({
+    container.isotope({
       itemSelector: '.itemContainer ul li',
       layoutMode: 'masonry'
     });
   }
 
-  $container.imagesLoaded(function() {
+  container.imagesLoaded(function() {
     $('[data-toggle=infinitescroll]').each(function() {
       var target = $(this).data('target') || '#posts';
       
-      $container.infinitescroll({
+      container.infinitescroll({
         navSelector: '.paging',
         nextSelector: $(this).data('next-selector'),
         itemSelector: '.itemContainer ul li',
@@ -96,12 +96,12 @@
         });
         
         $(newElements).imagesLoaded(function() {
-          $container.isotope('appended', $(newElements));
-          $container.isotope('layout');
+          container.isotope('appended', $(newElements));
+          container.isotope('layout');
         });
       });
     });
-    $container.isotope('layout');
+    container.isotope('layout');
   });
 
 
