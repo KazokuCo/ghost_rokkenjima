@@ -1,139 +1,136 @@
-(function($){ 
+(function($){
   "use strict";
 
- $(".paging.manualtrigger .moreprevious").css("visibility","hidden");   
+  $(".paging.manualtrigger .moreprevious").css("visibility","hidden");
 
-// ______________ RETINA
 
-if(window.devicePixelRatio >= 1.2){
+
+  // ______________ RETINA
+
+  if (window.devicePixelRatio >= 1.2) {
     var images = document.getElementsByTagName('img');
-    for(var i=0;i < images.length;i++){
-        var attr = images[i].getAttribute('data-2x');
-        if(attr){
-            images[i].src = attr;
-        }
+    for (var i = 0; i < images.length; i++) {
+      var attr = images[i].getAttribute('data-2x');
+      if (attr) {
+        images[i].src = attr;
+      }
     }
-}
+  }
 
-// ______________ FIXED MENU AT SCROLL
 
-jQuery("document").ready(function($){
-  
-  var nav = $('.main-nav');
-  var header = $('.header');
-  
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > header.height()) {
-      nav.addClass("f-nav").fadeIn('fast');
-    } else {
-      nav.removeClass("f-nav").fadeIn('fast');
-    }
+
+  // ______________ FIXED MENU AT SCROLL
+
+  jQuery("document").ready(function($) {
+    var nav = $('.main-nav');
+    var header = $('.header');
+
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > header.height()) {
+        nav.addClass("f-nav").fadeIn('fast');
+      } else {
+        nav.removeClass("f-nav").fadeIn('fast');
+      }
+    });
   });
 
-});   
 
-// ______________ SOCIAL LIKES
 
-$('.social-likes').socialLikes({
+  // ______________ SOCIAL LIKES
+
+  $('.social-likes').socialLikes({
     counters: true,
     zeroes: true,
-    forceUpdate: true
-});
-
-// ______________ MOBILE MENU
-
- $(function(){
-        $('nav.mobile-menu').slicknav();
-    });
-
-// ______________ ISOTOPE & INFINITE SCROLL
+    forceUpdate: true,
+  });
 
 
-var $container = $('.itemContainer ul');
 
-if (conditionizr.safari && conditionizr.windows) {
-$container.isotope({
-  itemSelector: '.itemContainer ul li',
-  layoutMode: 'masonry',
-  masonry: {gutter: 15}
-});
-} else {
-$container.isotope({
-  itemSelector: '.itemContainer ul li',
-  layoutMode: 'masonry'
-}); 
-}
+  // ______________ MOBILE MENU
 
-$container.imagesLoaded( function() {
+  $(function() {
+    $('nav.mobile-menu').slicknav();
+  });
 
 
-   $('[data-toggle=infinitescroll]').each(function() {
-   var target = $(this).data('target') || '#posts';
 
-  $container.infinitescroll({
-      navSelector: '.paging',
-      nextSelector: $(this).data('next-selector'),
+  // ______________ ISOTOPE & INFINITE SCROLL
+
+  var $container = $('.itemContainer ul');
+
+  if (conditionizr.safari && conditionizr.windows) {
+    $container.isotope({
       itemSelector: '.itemContainer ul li',
-      maxPage: parseInt($(this).data('max-page')),
-      loading: {
-        finishedMsg: 'ALL POSTS LOADED',
-        img: '/assets/images/loader.png',
-        msg: null,
-        msgText: '',
-      },
-      pixelsFromNavToBottom: 10,
-     behavior    : undefined
-    },
+      layoutMode: 'masonry',
+      masonry: { gutter: 15 }
+    });
+  } else {
+    $container.isotope({
+      itemSelector: '.itemContainer ul li',
+      layoutMode: 'masonry'
+    });
+  }
 
+  $container.imagesLoaded(function() {
+    $('[data-toggle=infinitescroll]').each(function() {
+      var target = $(this).data('target') || '#posts';
       
-       // call Isotope as a callback
-
-        function( newElements ) {
-
+      $container.infinitescroll({
+        navSelector: '.paging',
+        nextSelector: $(this).data('next-selector'),
+        itemSelector: '.itemContainer ul li',
+        maxPage: parseInt($(this).data('max-page')),
+        loading: {
+          finishedMsg: 'ALL POSTS LOADED',
+          img: '/assets/images/loader.png',
+          msg: null,
+          msgText: '',
+        },
+        pixelsFromNavToBottom: 10,
+        behavior: undefined
+      }, function(newElements) {
         $('.social-likes').socialLikes({
-        counters: true,
-        zeroes: true,
-        forceUpdate: true
-        });    
-     
-     $(newElements).imagesLoaded(function(){
-            $container.isotope('appended', $(newElements));
-            $container.isotope('layout');
+          counters: true,
+          zeroes: true,
+          forceUpdate: true
         });
+        
+        $(newElements).imagesLoaded(function() {
+          $container.isotope('appended', $(newElements));
+          $container.isotope('layout');
+        });
+      });
+    });
+    $container.isotope('layout');
+  });
 
-      }
-      );
-      
- });
-      
-   $container.isotope('layout');
-});
 
 
-// ______________ BACK TO TOP BUTTON
+  // ______________ BACK TO TOP BUTTON
 
-$(window).scroll(function () {
+  $(window).scroll(function() {
     if ($(this).scrollTop() > 200) {
       $('#back-to-top').fadeIn('slow');
     } else {
       $('#back-to-top').fadeOut('slow');
     }
   });
-$('#back-to-top').click(function(){
-            $("html, body").animate({ scrollTop: 0 }, 600);
-            return false;
-        });
+  $('#back-to-top').click(function() {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+  });
 
 
-// ______________ SUPERFISH MENU
+
+  // ______________ SUPERFISH MENU
 
   var $j = jQuery.noConflict();
-     $j(document).ready(function(){
-        $j("ul.sf-menu").superfish({
-            animation:   {opacity:'show',height:'show'},   // slide-down effect without fade-in
-            delay:     300,              // 1.2 second delay on mouseout
-            speed:       'fast'
-        });
+  $j(document).ready(function() {
+    $j("ul.sf-menu").superfish({
+      animation: { opacity:'show', height:'show' },
+      delay: 300,
+      speed: 'fast'
     });
+  });
 
 })(jQuery);
