@@ -82,7 +82,7 @@
         maxPage: parseInt($(this).data('max-page')),
         loading: {
           finishedMsg: 'ALL POSTS LOADED',
-          img: '/assets/images/loader.png',
+          img: '/assets/images/loader.gif',
           msg: null,
           msgText: '',
         },
