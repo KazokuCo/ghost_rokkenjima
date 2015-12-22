@@ -1658,8 +1658,11 @@ blockquote p {
 .post-template .comment {
     background-color: #fcfcff;
 }
-.discord-icon {
+.social a path { fill: #fff; }
+.social a:hover path { fill: #00b6db; }
+.extra-icon {
     width: 20px;
+    max-height: 15px;
     vertical-align: bottom;
 }
 *>.hover {
