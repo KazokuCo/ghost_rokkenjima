@@ -1665,15 +1665,3 @@ blockquote p {
     max-height: 15px;
     vertical-align: bottom;
 }
-*>.hover {
-    display: none;
-}
-*>.blur {
-    display: inherit;
-}
-*:hover>.hover {
-    display: inherit;
-}
-*:hover>.blur {
-    display: none;
-}
