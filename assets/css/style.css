@@ -1660,8 +1660,10 @@ blockquote p {
 }
 .social a path { fill: #fff; }
 .social a:hover path { fill: #00b6db; }
+.social a {
+  vertical-align: bottom;
+}
 .extra-icon {
     width: 20px;
     max-height: 15px;
-    vertical-align: bottom;
 }
