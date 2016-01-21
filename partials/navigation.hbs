@@ -1,18 +1,103 @@
 {{! Navigation }}
 <div class="main-nav">
   <div class="row">
-  <div class="small-12 columns">
-     <nav class="desktop-menu">
-     <ul class="sf-menu">
-      {{#foreach _not_navigation}}
-      <li class="nav-{{slug}}{{#if current}} current-menu-item{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
-      {{/foreach}}
+    <div class="small-12 columns">
+      <nav class="desktop-menu">
+        <ul class="sf-menu">
+          {{!-- {{#foreach navigation}} --}}
+            {{!-- <li class="nav-{{slug}}{{#if current}} current-menu-item{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li> --}}
+          {{!-- {{/foreach}} --}}
+          
+          <li><a href="{{@blog.url}}/">NEWS</a></li>
+          <li><a href="https://forum.kazamatsuri.org/">FORUM</a></li>
+          <li><a href="{{@blog.url}}/welcome">WELCOME</a></li>
+          <li>
+            <a>SERIES INFO</a>
+            <ul>
+              <li><a href="{{@blog.url}}/key">WHAT IS KEY?</a></li>
+              <li><a href="{{@blog.url}}/kanon">KANON</a></li>
+              <li><a href="{{@blog.url}}/air">AIR</a></li>
+              <li><a href="{{@blog.url}}/clannad">CLANNAD</a></li>
+              <li><a href="{{@blog.url}}/planetarian">PLANETARIAN</a></li>
+              <li><a href="{{@blog.url}}/tomoyo-after">TOMOYO AFTER</a></li>
+              <li><a href="{{@blog.url}}/little-busters">LITTLE BUSTERS!</a></li>
+              <li><a href="{{@blog.url}}/kud-wafter">KUD WAFTER</a></li>
+              <li><a href="{{@blog.url}}/rewrite">REWRITE</a></li>
+              <li><a href="{{@blog.url}}/angel-beats">ANGEL BEATS!</a></li>
+              <li><a href="{{@blog.url}}/charlotte">CHARLOTTE</a></li>
+              <li><a href="{{@blog.url}}/harmonia">HARMONIA</a></li>
+              <li><a href="{{@blog.url}}/others">OTHERS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>BOOKCLUBS</a>
+            <ul>
+              <li><a href="{{@blog.url}}/clannad-bookclub">CLANNAD BOOKCLUB</a></li>
+              <li><a href="{{@blog.url}}/charlotte-anime-bookclub">CHARLOTTE ANIME BOOKCLUB</a></li>
+              <li><a href="{{@blog.url}}/air-bookclub">AIR BOOKCLUB</a></li>
+              <li><a href="{{@blog.url}}/planetarian-bookclub">PLANETARIAN BOOKCLUB</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>COMMUNITY CONTENT</a>
+            <ul>
+              <li><a href="{{@blog.url}}/kazamatsuri-presents-planetarian-drama-2-jerusalem-english-translation">PLANETARIAN JERUSALEM ENGLISH TRANSLATION</a></li>
+              <li><a href="{{@blog.url}}/little-busters-minecraft-build">LB! MINECRAFT BUILD</a></li>
+              <li><a href="http://aphorisms.kazamatsuri.org/">LB! APHORISM GENERATOR</a></li>
+              <li><a href="https://www.youtube.com/watch?v=kvUeC-mXsbQ">KAZAMATSURI CHORUS: FAREWELL SONG</a></li>
+              <li><a href="http://kazamatsuri.org/kazamatsuri-org-presents-little-busters-suginami-mod/">LB! SUGINAMI MOD</a></li>
+              <li><a href="{{@blog.url}}/other-translations">OTHER TRANSLATIONS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>TAGS</a>
+            <ul>
+              <li>
+                <a href="#">SERIES:</a>
+                <ul>
+                  <li><a href="{{@blog.url}}/tag/kanon">KANON</a></li>
+                  <li><a href="{{@blog.url}}/tag/air">AIR</a></li>
+                  <li><a href="{{@blog.url}}/tag/clannad">CLANNAD</a></li>
+                  <li><a href="{{@blog.url}}/tag/planetarian">PLANETARIAN</a></li>
+                  <li><a href="{{@blog.url}}/tag/tomoyo-after">TOMOYO AFTER</a></li>
+                  <li><a href="{{@blog.url}}/tag/little-busters">LITTLE BUSTERS!</a></li>
+                  <li><a href="{{@blog.url}}/tag/kud-wafter">KUD WAFTER</a></li>
+                  <li><a href="{{@blog.url}}/tag/rewrite">REWRITE</a></li>
+                  <li><a href="{{@blog.url}}/tag/angel-beats">ANGEL BEATS!</a></li>
+                  <li><a href="{{@blog.url}}/tag/charlotte">CHARLOTTE</a></li>
+                  <li><a href="{{@blog.url}}/tag/harmonia">HARMONIA</a></li>
+                  <li><a href="{{@blog.url}}/tag/holy-breaker">HOLY BREAKER!</a></li>
+                </ul>
+              </li>
+              <li><a href="{{@blog.url}}/tag/announcements">ANNOUNCEMENTS</a></li>
+              <li><a href="{{@blog.url}}/tag/community">COMMUNITY</a></li>
+              <li><a href="{{@blog.url}}/tag/bookclub">BOOKCLUB</a></li>
+              <li><a href="{{@blog.url}}/tag/the-monthly-terra">THE MONTHLY TERRA</a></li>
+              <li><a href="{{@blog.url}}/tag/music">MUSIC</a></li>
+              <li><a href="{{@blog.url}}/tag/goods">GOODS</a></li>
+              <li><a href="{{@blog.url}}/tag/events">EVENTS</a></li>
+              <li><a href="{{@blog.url}}/tag/video">VIDEO</a></li>
+              <li><a href="{{@blog.url}}/tag/meta">META</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
 
-      <li><a href="{{@blog.url}}/">NEWS</a></li>
-      <li><a href="https://forum.kazamatsuri.org/">FORUM</a></li>
-      <li><a href="{{@blog.url}}/welcome">WELCOME</a></li>
-      <li><a>SERIES INFO</a>
-        <ul>
+<nav class="mobile-menu">
+  <ul>
+    {{!-- {{#foreach navigation}} --}}
+      {{!-- <li class="nav-{{slug}}{{#if current}} current-menu-item{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li> --}}
+    {{!-- {{/foreach}} --}}
+
+    <li><a href="{{@blog.url}}/">NEWS</a></li>
+    <li><a href="https://forum.kazamatsuri.org/">FORUM</a></li>
+    <li><a href="{{@blog.url}}/welcome">WELCOME</a></li>
+    <li>
+      <a href="">SERIES INFO</a>
+      <ul>
         <li><a href="{{@blog.url}}/key">WHAT IS KEY?</a></li>
         <li><a href="{{@blog.url}}/kanon">KANON</a></li>
         <li><a href="{{@blog.url}}/air">AIR</a></li>
@@ -28,40 +113,43 @@
         <li><a href="{{@blog.url}}/others">OTHERS</a></li>
       </ul>
     </li>
-    <li><a>BOOKCLUBS</a>
-       <ul>
-         <li><a href="{{@blog.url}}/clannad-bookclub">CLANNAD BOOKCLUB</a></li>
-         <li><a href="{{@blog.url}}/charlotte-anime-bookclub">CHARLOTTE ANIME BOOKCLUB</a></li>
-         <li><a href="{{@blog.url}}/air-bookclub">AIR BOOKCLUB</a></li>
-         <li><a href="{{@blog.url}}/planetarian-bookclub">PLANETARIAN BOOKCLUB</a></li>
-       </ul>
-     </li>
-	 <li><a>COMMUNITY CONTENT</a>
-       <ul>
-    		 <li><a href="{{@blog.url}}/kazamatsuri-presents-planetarian-drama-2-jerusalem-english-translation">PLANETARIAN JERUSALEM ENGLISH TRANSLATION</a></li>
-    		 <li><a href="{{@blog.url}}/little-busters-minecraft-build">LB! MINECRAFT BUILD</a></li>
-    		 <li><a href="http://aphorisms.kazamatsuri.org/">LB! APHORISM GENERATOR</a></li>
-         <li><a href="https://www.youtube.com/watch?v=kvUeC-mXsbQ">KAZAMATSURI CHORUS: FAREWELL SONG</a></li>
-         <li><a href="http://kazamatsuri.org/kazamatsuri-org-presents-little-busters-suginami-mod/">LB! SUGINAMI MOD</a></li>
-		 <li><a href="{{@blog.url}}/other-translations">OTHER TRANSLATIONS</a></li>
-       </ul>
-     </li>
-     <li><a>TAGS</a>
+    <li>
+      <a>BOOKCLUBS</a>
       <ul>
-      <li><a href="#">SERIES:</a>
+        <li><a href="{{@blog.url}}/clannad-bookclub">CLANNAD BOOKCLUB</a></li>
+        <li><a href="{{@blog.url}}/charlotte-anime-bookclub">CHARLOTTE ANIME BOOKCLUB</a></li>
+        <li><a href="{{@blog.url}}/air-bookclub">AIR BOOKCLUB</a></li>
+        <li><a href="{{@blog.url}}/planetarian-bookclub">PLANETARIAN BOOKCLUB</a></li>
+      </ul>
+    </li>
+    <li>
+      <a>COMMUNITY CONTENT</a>
+      <ul>
+        <li><a href="{{@blog.url}}/kazamatsuri-presents-planetarian-drama-2-jerusalem-english-translation">PLANETARIAN JERUSALEM ENGLISH TRANSLATION</a></li>
+      	<li><a href="{{@blog.url}}/little-busters-minecraft-build">LB! MINECRAFT BUILD</a></li>
+      	<li><a href="http://aphorisms.kazamatsuri.org">LB! APHORISM GENERATOR</a></li>
+        <li><a href="https://www.youtube.com/watch?v=kvUeC-mXsbQ">KAZAMATSURI CHORUS: FAREWELL SONG</a></li>
+        <li><a href="http://kazamatsuri.org/kazamatsuri-org-presents-little-busters-suginami-mod/">LB! SUGINAMI MOD</a></li>
+        <li><a href="{{@blog.url}}/other-translations">OTHER TRANSLATIONS</a></li>
+      </ul>
+    </li>
+    <li>
+      <a>TAGS</a>
+      <ul>
+        <li><a href="#">SERIES:</a>
         <ul>
-        <li><a href="{{@blog.url}}/tag/kanon">KANON</a></li>
-        <li><a href="{{@blog.url}}/tag/air">AIR</a></li>
-        <li><a href="{{@blog.url}}/tag/clannad">CLANNAD</a></li>
-        <li><a href="{{@blog.url}}/tag/planetarian">PLANETARIAN</a></li>
-        <li><a href="{{@blog.url}}/tag/tomoyo-after">TOMOYO AFTER</a></li>
-        <li><a href="{{@blog.url}}/tag/little-busters">LITTLE BUSTERS!</a></li>
-        <li><a href="{{@blog.url}}/tag/kud-wafter">KUD WAFTER</a></li>
-        <li><a href="{{@blog.url}}/tag/rewrite">REWRITE</a></li>
-        <li><a href="{{@blog.url}}/tag/angel-beats">ANGEL BEATS!</a></li>
-        <li><a href="{{@blog.url}}/tag/charlotte">CHARLOTTE</a></li>
-        <li><a href="{{@blog.url}}/tag/harmonia">HARMONIA</a></li>
-        <li><a href="{{@blog.url}}/tag/holy-breaker">HOLY BREAKER!</a></li>
+          <li><a href="{{@blog.url}}/tag/kanon">KANON</a></li>
+          <li><a href="{{@blog.url}}/tag/air">AIR</a></li>
+          <li><a href="{{@blog.url}}/tag/clannad">CLANNAD</a></li>
+          <li><a href="{{@blog.url}}/tag/planetarian">PLANETARIAN</a></li>
+          <li><a href="{{@blog.url}}/tag/tomoyo-after">TOMOYO AFTER</a></li>
+          <li><a href="{{@blog.url}}/tag/little-busters">LITTLE BUSTERS!</a></li>
+          <li><a href="{{@blog.url}}/tag/kud-wafter">KUD WAFTER</a></li>
+          <li><a href="{{@blog.url}}/tag/rewrite">REWRITE</a></li>
+          <li><a href="{{@blog.url}}/tag/angel-beats">ANGEL BEATS!</a></li>
+          <li><a href="{{@blog.url}}/tag/charlotte">CHARLOTTE</a></li>
+          <li><a href="{{@blog.url}}/tag/harmonia">HARMONIA</a></li>
+          <li><a href="{{@blog.url}}/tag/holy-breaker">HOLY BREAKER!</a></li>
       </ul>
     </li>
     <li><a href="{{@blog.url}}/tag/announcements">ANNOUNCEMENTS</a></li>
@@ -74,85 +162,4 @@
     <li><a href="{{@blog.url}}/tag/video">VIDEO</a></li>
     <li><a href="{{@blog.url}}/tag/meta">META</a></li>
   </ul>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-
-<nav class="mobile-menu">
-  <ul>
-  {{#foreach _not_navigation}}
-  <li class="nav-{{slug}}{{#if current}} current-menu-item{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
-  {{/foreach}}
-
-  <li><a href="{{@blog.url}}/">NEWS</a></li>
-  <li><a href="https://forum.kazamatsuri.org/">FORUM</a></li>
-  <li><a href="{{@blog.url}}/welcome">WELCOME</a></li>
-  <li><a href="">SERIES INFO</a>
-    <ul>
-    <li><a href="{{@blog.url}}/key">WHAT IS KEY?</a></li>
-    <li><a href="{{@blog.url}}/kanon">KANON</a></li>
-    <li><a href="{{@blog.url}}/air">AIR</a></li>
-    <li><a href="{{@blog.url}}/clannad">CLANNAD</a></li>
-    <li><a href="{{@blog.url}}/planetarian">PLANETARIAN</a></li>
-    <li><a href="{{@blog.url}}/tomoyo-after">TOMOYO AFTER</a></li>
-    <li><a href="{{@blog.url}}/little-busters">LITTLE BUSTERS!</a></li>
-    <li><a href="{{@blog.url}}/kud-wafter">KUD WAFTER</a></li>
-    <li><a href="{{@blog.url}}/rewrite">REWRITE</a></li>
-    <li><a href="{{@blog.url}}/angel-beats">ANGEL BEATS!</a></li>
-    <li><a href="{{@blog.url}}/charlotte">CHARLOTTE</a></li>
-    <li><a href="{{@blog.url}}/harmonia">HARMONIA</a></li>
-    <li><a href="{{@blog.url}}/others">OTHERS</a></li>
-  </ul>
-</li>
-<li><a>BOOKCLUBS</a>
-  <ul>
-  <li><a href="{{@blog.url}}/clannad-bookclub">CLANNAD BOOKCLUB</a></li>
-  <li><a href="{{@blog.url}}/charlotte-anime-bookclub">CHARLOTTE ANIME BOOKCLUB</a></li>
-  <li><a href="{{@blog.url}}/air-bookclub">AIR BOOKCLUB</a></li>
-  <li><a href="{{@blog.url}}/planetarian-bookclub">PLANETARIAN BOOKCLUB</a></li>
-</ul>
-</li>
-<li><a>COMMUNITY CONTENT</a>
-       <ul>
-    		 <li><a href="{{@blog.url}}/kazamatsuri-presents-planetarian-drama-2-jerusalem-english-translation">PLANETARIAN JERUSALEM ENGLISH TRANSLATION</a></li>
-    		 <li><a href="{{@blog.url}}/little-busters-minecraft-build">LB! MINECRAFT BUILD</a></li>
-    		 <li><a href="http://aphorisms.kazamatsuri.org">LB! APHORISM GENERATOR</a></li>
-         <li><a href="https://www.youtube.com/watch?v=kvUeC-mXsbQ">KAZAMATSURI CHORUS: FAREWELL SONG</a></li>
-         <li><a href="http://kazamatsuri.org/kazamatsuri-org-presents-little-busters-suginami-mod/">LB! SUGINAMI MOD</a></li>
-		 <li><a href="{{@blog.url}}/other-translations">OTHER TRANSLATIONS</a></li>
-		</ul>
-     </li>
-<li><a>TAGS</a>
-  <ul>
-  <li><a href="#">SERIES:</a>
-    <ul>
-    <li><a href="{{@blog.url}}/tag/kanon">KANON</a></li>
-    <li><a href="{{@blog.url}}/tag/air">AIR</a></li>
-    <li><a href="{{@blog.url}}/tag/clannad">CLANNAD</a></li>
-    <li><a href="{{@blog.url}}/tag/planetarian">PLANETARIAN</a></li>
-    <li><a href="{{@blog.url}}/tag/tomoyo-after">TOMOYO AFTER</a></li>
-    <li><a href="{{@blog.url}}/tag/little-busters">LITTLE BUSTERS!</a></li>
-    <li><a href="{{@blog.url}}/tag/kud-wafter">KUD WAFTER</a></li>
-    <li><a href="{{@blog.url}}/tag/rewrite">REWRITE</a></li>
-    <li><a href="{{@blog.url}}/tag/angel-beats">ANGEL BEATS!</a></li>
-    <li><a href="{{@blog.url}}/tag/charlotte">CHARLOTTE</a></li>
-    <li><a href="{{@blog.url}}/tag/harmonia">HARMONIA</a></li>
-    <li><a href="{{@blog.url}}/tag/holy-breaker">HOLY BREAKER!</a></li>
-  </ul>
-</li>
-
-<li><a href="{{@blog.url}}/tag/announcements">ANNOUNCEMENTS</a></li>
-<li><a href="{{@blog.url}}/tag/community">COMMUNITY</a></li>
-<li><a href="{{@blog.url}}/tag/bookclub">BOOKCLUB</a></li>
-<li><a href="{{@blog.url}}/tag/the-monthly-terra">THE MONTHLY TERRA</a></li>
-<li><a href="{{@blog.url}}/tag/music">MUSIC</a></li>
-<li><a href="{{@blog.url}}/tag/goods">GOODS</a></li>
-<li><a href="{{@blog.url}}/tag/events">EVENTS</a></li>
-<li><a href="{{@blog.url}}/tag/video">VIDEO</a></li>
-<li><a href="{{@blog.url}}/tag/meta">META</a></li>
-</ul>
-</li>
 </nav>
