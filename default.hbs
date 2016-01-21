@@ -77,6 +77,14 @@
   </script>
 
   {{ghost_head}}
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:site" content="@KazamatsuriOrg" />
+  {{#is "post, page"}}
+    <meta name="twitter:card" content="summary_large_image" />
+  {{else}}
+    <meta name="twitter:card" content="summary" />
+  {{/is}}
 </head>
 
 <body class="{{body_class}}">
