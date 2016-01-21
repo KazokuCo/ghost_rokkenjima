@@ -1679,6 +1679,12 @@ article .shareit {
 
 article .shareit iframe {
   margin: 0;
+  vertical-align: bottom;
+}
+
+article .shareit .button {
+  display: inline-block;
+  position: relative;
 }
 
 @media only screen and (max-width: 40.063em) {
