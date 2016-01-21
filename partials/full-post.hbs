@@ -14,17 +14,18 @@
           </div>
           <div class="meta">
             <div class="row">
-              <div class="small-8 large-8 medium-8 columns">
+              <div class="small-12 large-8 medium-8 columns">
                 <abbr title="{{date published_at}}"><i class="fa fa-clock-o"></i> {{date published_at timeago="true"}}</abbr>, <i class="fa fa-user"></i> by {{#author}}<a href="{{url}}">{{name}}</a>{{/author}}{{#if tags}}, <i class="fa fa-tags"></i> on {{tags}}{{/if}}
               </div>
-              <div class="small-4 large-4 medium-4 columns">
+              <div class="small-12 large-4 medium-4 columns">
                 {{! Share Buttons }}
                 <div class="shareit">
-                  <div class="social-likes social-likes_single" data-single-title="Share">
-                    <div class="facebook" title="Share link on Facebook">Facebook</div>
-                    <div class="twitter" data-via="{{@blog.title}}" data-related="{{encode title}}" title="Share link on Twitter">Twitter</div>
-                    <div class="plusone" title="Share link on Google+">Google+</div>
-                  </div>
+                  {{!-- <div class="social-likes social-likes_single" data-single-title="Share"> --}}
+                    {{!-- <div class="facebook" title="Share link on Facebook">Facebook</div> --}}
+                    {{!-- <div class="twitter" data-via="{{@blog.title}}" data-related="{{encode title}}" title="Share link on Twitter">Twitter</div> --}}
+                    {{!-- <div class="plusone" title="Share link on Google+">Google+</div> --}}
+                  {{!-- </div> --}}
+                  <a href="https://twitter.com/share" class="twitter-share-button"{count} data-text="Lorem ipsum" data-via="KazamatsuriOrg"><i class="fa fa-twitter"></i> Tweet</a>
                 </div>
               </div>
             </div>

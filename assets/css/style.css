@@ -1597,6 +1597,9 @@ blockquote p {
         margin-top: 8px;
     }
 }
+
+
+
 /* -- Custom -- */
 
 .motto {
@@ -1666,4 +1669,38 @@ blockquote p {
 .extra-icon {
     width: 20px;
     max-height: 15px;
+}
+
+article .shareit {
+  float: none;
+  margin-top: 0;
+  text-align: right;
+}
+
+article .shareit iframe {
+  margin: 0;
+}
+
+@media only screen and (max-width: 40.063em) {
+  article .shareit {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+  }
+}
+
+/* -- Twitter -- */
+
+blockquote.twitter-tweet {
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #e1e8ed;
+  border-radius: 4px;
+  max-width: 520px;
+  color: #697882;
+}
+blockquote.twitter-tweet p {
+  display: block;
+  color: #1c2022;
+  margin-top: 0;
 }
