@@ -5,12 +5,14 @@
       <article>
         <div class="{{post_class}}">
           <div class="postcontent">
-            <h1><span>{{title}}</span></h1>
-            {{#if image}}
-            <p style="text-align: center;"><img src="{{image}}" alt="{{title}}" /></p>
-            {{/if}}
+            <div class="inner">
+              <h1><span>{{title}}</span></h1>
+              {{#if image}}
+              <p><img src="{{image}}" alt="{{title}}" /></p>
+              {{/if}}
 
-            {{content}}
+              {{content}}
+            </div>
           </div>
           <div class="meta">
             <div class="row">
