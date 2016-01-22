@@ -1643,6 +1643,15 @@ blockquote p {
     width: 800px;
 }
 
+/* -- Home Page -- */
+
+.home-template .content p, .home-template .content li {
+  font-size: 14px;
+  text-align: left;
+}
+
+
+
 /* -- Articles & Pages -- */
 
 .content {
