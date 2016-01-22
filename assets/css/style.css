@@ -1628,10 +1628,9 @@ blockquote p {
 .content .inner {
   max-width: 900px;
   margin: auto;
-}
-.content .inner p {
-    font-size: 16px;
-    line-height: 1.4em;
+  font-size: 16px;
+  line-height: 1.4em;
+  text-align: justify;
 }
 .social-likes__counter {
     color: #333;
