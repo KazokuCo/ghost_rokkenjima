@@ -1674,6 +1674,17 @@ h1 {
   text-align: justify;
 }
 
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 28px;
+  }
+  
+  .content p, .content li {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
 .postcontent {
   max-width: 800px;
   margin: auto;
