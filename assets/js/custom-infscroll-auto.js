@@ -38,11 +38,11 @@
 
   // ______________ SOCIAL LIKES
 
-  $('.social-likes').socialLikes({
+  /*$('.social-likes').socialLikes({
     counters: true,
     zeroes: true,
     forceUpdate: true,
-  });
+  });*/
 
 
 
@@ -89,11 +89,11 @@
         pixelsFromNavToBottom: 10,
         behavior: undefined
       }, function(newElements) {
-        $('.social-likes').socialLikes({
+        /*$('.social-likes').socialLikes({
           counters: true,
           zeroes: true,
           forceUpdate: true
-        });
+        });*/
         
         $(newElements).imagesLoaded(function() {
           container.isotope('appended', $(newElements));
