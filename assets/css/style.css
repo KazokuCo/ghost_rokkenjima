@@ -1600,7 +1600,33 @@ blockquote p {
 
 
 
-/* -- Custom -- */
+/* -- Navigation -- */
+
+.main-nav {
+    z-index: 9999;
+    position: absolute;
+}
+.f-nav {
+    position: fixed;
+}
+@media screen and (max-width: 991px) {
+    .sf-menu a {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+.social a path { fill: #fff; }
+.social a:hover path { fill: #00b6db; }
+.social a {
+  vertical-align: bottom;
+}
+.extra-icon {
+    width: 20px;
+    max-height: 15px;
+}
+
+/* -- Header -- */
 
 .motto {
     display: none;
@@ -1616,6 +1642,9 @@ blockquote p {
     max-height: 225px;
     width: 800px;
 }
+
+/* -- Articles & Pages -- */
+
 .content {
     background-image: url(/content/images/2015/08/kv_04.jpg);
     background-position: bottom left;
@@ -1625,56 +1654,41 @@ blockquote p {
     background-attachment: fixed;
     /*padding-top: 10px;*/
 }
+
+h1 {
+  font-size: 38px;
+}
+
 .content p, .content li {
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1.4em;
   text-align: justify;
 }
-.content .inner {
-  max-width: 900px;
+
+.postcontent {
+  max-width: 800px;
   margin: auto;
 }
-.social-likes__counter {
-    color: #333;
+.postcontent img {
+  display: block;
+  margin: 0 auto;
 }
-.main-nav {
-    z-index: 9999;
-    position: absolute;
+article, .prevnext, .author-wrap {
+  margin-bottom: 30px;
 }
-.f-nav {
-    position: fixed;
-}
-.tag-title {
-    padding-top: 80px;
-}
-@media screen and (max-width: 991px) {
-    .sf-menu a {
-        font-size: 12px;
-        line-height: 12px;
-    }
-}
-.post-template article,
-.post-template .prevnext,
-.post-template .author-wrap {
-    margin-bottom: 30px;
-}
-.post-template .prevnext {
+
+.prevnext {
     padding: 0 20px;
 }
 .author-wrap img {
     max-width: 100px;
 }
-.post-template .comment {
+.comment {
     background-color: #fcfcff;
 }
-.social a path { fill: #fff; }
-.social a:hover path { fill: #00b6db; }
-.social a {
-  vertical-align: bottom;
-}
-.extra-icon {
-    width: 20px;
-    max-height: 15px;
+
+.tag-title {
+    padding-top: 80px;
 }
 
 /* -- Share Buttons -- */
