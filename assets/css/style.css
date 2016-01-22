@@ -1768,3 +1768,13 @@ blockquote.twitter-tweet p {
 .fb-post blockquote p {
   color: #141823;
 }
+
+/* -- Galleries -- */
+
+.gallery {
+  font-size: 0;
+}
+
+.gallery img {
+  display: inline-block;
+}
