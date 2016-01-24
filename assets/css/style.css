@@ -1789,3 +1789,20 @@ blockquote.twitter-tweet p {
 .gallery img {
   display: inline-block;
 }
+
+/* -- YouTube Videos -- */
+
+article .video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+article .video iframe, article .video object, article .video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
