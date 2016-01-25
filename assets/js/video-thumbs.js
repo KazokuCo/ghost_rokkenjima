@@ -11,9 +11,9 @@
 (function($) {
   'use strict';
   
-  function thumbURL(type, id, options) {
+  function thumbURL(type, id, override, options) {
     if (type == 'youtube') {
-      var filename = options.maxres ? '0.jpg' : 'sddefault.jpg';
+      var filename = (options.maxres ? (override || 'maxresdefault') : 'sddefault') + '.jpg';
       return 'https://img.youtube.com/vi/' + id + '/' + filename;
     }
   }
@@ -46,6 +46,9 @@
         return;
       }
       
+      // Check for element properties
+      var thumbOverride = iframe.dataset.thumb;
+      
       // Stop the iframe from loading, store the URL as data-src, then hide it
       iframe.dataset.src = src;
       iframe.src = 'about:blank';
@@ -60,7 +63,7 @@
       if (options.maxres) {
         link.className += ' video-thumb-maxres';
       }
-      link.style.backgroundImage = "url('" + thumbURL(type, id, options) + "')";
+      link.style.backgroundImage = "url('" + thumbURL(type, id, thumbOverride, options) + "')";
       link.innerHTML = "<div><span><i class='fa fa-youtube-play'></i></span></div>";
       container.appendChild(link);
       
