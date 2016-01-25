@@ -133,11 +133,5 @@
       speed: 'fast'
     });
   });
-  
-  
-  
-  // Lazy Youtube embeds
-  $('.blogitems .video').videoThumbs();
-  $('article .video').videoThumbs({ maxres: true });
 
 })(jQuery);

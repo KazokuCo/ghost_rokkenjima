@@ -164,6 +164,12 @@
   {{! The JavaScript files }}
   {{! jQuery }}
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  {{! Video thumbnails}}
+  <script type="text/javascript" src="{{asset "/js/video-thumbs.js"}}"></script>
+  <script type="text/javascript">
+  $('.blogitems .video').videoThumbs();
+  $('article .video').videoThumbs({ maxres: true });
+  </script>
   {{! Superfish Menu }}
   <script type="text/javascript" src="{{asset "/js/vendor/hoverIntent.min.js"}}"></script>
   <script type="text/javascript" src="{{asset "/js/vendor/superfish.js"}}"></script>
@@ -182,7 +188,6 @@
   <script type="text/javascript" src="{{asset "/js/vendor/jquery.infinitescroll.min.js"}}"></script>
   <script type="text/javascript" src="{{asset "/js/vendor/manual-trigger.js"}}"></script>
   {{! Scripts Hooks }}
-  <script type="text/JavaScript" src="{{asset "/js/video-thumbs.js"}}"></script>
   <script type="text/javascript" src="{{asset "/js/custom-infscroll-auto.js"}}"></script>
 </body>
 </html>
