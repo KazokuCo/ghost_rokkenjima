@@ -13,7 +13,7 @@
   
   function thumbURL(type, id, options) {
     if (type == 'youtube') {
-      var filename = options.maxres ? 'maxresdefault.jpg' : 'sddefault.jpg';
+      var filename = options.maxres ? '0.jpg' : 'sddefault.jpg';
       return 'https://img.youtube.com/vi/' + id + '/' + filename;
     }
   }
