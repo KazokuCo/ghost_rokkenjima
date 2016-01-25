@@ -30,7 +30,7 @@
       var id = null;
       
       // Extract video ID from Youtube embeds
-      var match = src.match(/youtube.com\/embed\/(.*)/);
+      var match = src.match(/youtube.com\/embed\/([^?]*)/);
       if (match) {
         type = 'youtube';
         id = match[1];
