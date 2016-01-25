@@ -64,7 +64,14 @@
         link.className += ' video-thumb-maxres';
       }
       link.style.backgroundImage = "url('" + thumbURL(type, id, thumbOverride, options) + "')";
-      link.innerHTML = "<div><span><i class='fa fa-youtube-play'></i></span></div>";
+      
+      var html = [];
+      if (iframe.dataset.title) {
+        html.push("<span class='title'>" + iframe.dataset.title + "</span>");
+      }
+      html.push("<div class='play'><span><i class='fa fa-youtube-play'></i></span></div>");
+      link.innerHTML = html.join('');
+      
       container.appendChild(link);
       
       // Make the link play the video when clicked

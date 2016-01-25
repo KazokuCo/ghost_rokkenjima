@@ -1814,14 +1814,35 @@ article .video > *, .post .video > * {
 .video .video-thumb {
   background-size: cover;
   background-position: center;
+  text-decoration: none;
+  color: #eee;
 }
-.video .video-thumb div {
+.video .video-thumb:hover, .video .video-thumb:focus, .video .video-thumb:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+.video .video-thumb .title {
+  display: block;
+  height: 70px;
+  background-color: rgba(0,0,0,0.65);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+  font-size: 18px;
+  padding-top: 10px;
+  text-shadow: 0 0 1px #000;
+}
+
+.video .video-thumb .play {
   display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
 }
-
-.video .video-thumb div span {
+.video .video-thumb .play span {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
@@ -1830,9 +1851,9 @@ article .video > *, .post .video > * {
   text-shadow: 0 0 20px #fff;
   transition: color 0.1s;
 }
-.video .video-thumb-maxres div span {
+.video .video-thumb-maxres .play span {
   font-size: 60px;
 }
-.video .video-thumb:hover div span {
+.video .video-thumb:hover .play span {
   color: #cc181e;
 }
