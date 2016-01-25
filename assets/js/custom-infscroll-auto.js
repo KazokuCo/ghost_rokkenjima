@@ -137,9 +137,7 @@
   
   
   // Lazy Youtube embeds
-  $(document).ready(function() {
-    $('.blogitems .video').videoThumbs();
-    $('article .video').videoThumbs({ maxres: true });
-  });
+  $('.blogitems .video').videoThumbs();
+  $('article .video').videoThumbs({ maxres: true });
 
 })(jQuery);
