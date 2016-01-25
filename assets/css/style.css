@@ -1812,8 +1812,10 @@ article .video > *, .post .video > * {
 }
 
 .video .video-thumb {
-  background-size: cover;
+  background-color: #000;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   text-decoration: none;
   color: #eee;
 }
