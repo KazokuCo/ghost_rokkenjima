@@ -66,7 +66,7 @@
       link.style.backgroundImage = "url('" + thumbURL(type, id, thumbOverride, options) + "')";
       
       var html = [];
-      html.push("<span class='title'>" + iframe.dataset.title + "</span>");
+      html.push("<span class='title'>" + (iframe.dataset.title || '') + "</span>");
       html.push("<div class='play'><span><i class='fa fa-youtube-play'></i></span></div>");
       link.innerHTML = html.join('');
       
