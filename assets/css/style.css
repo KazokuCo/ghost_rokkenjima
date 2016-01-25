@@ -1645,7 +1645,7 @@ blockquote p {
 
 /* -- Home Page -- */
 
-.blogpagesection .content p, .blogpagesection .content li {
+.content.blogpagesection p, .content.blogpagesection li {
   font-size: 14px;
   text-align: left;
 }
