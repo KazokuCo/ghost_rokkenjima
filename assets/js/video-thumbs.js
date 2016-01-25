@@ -34,6 +34,11 @@
       if (match) {
         type = 'youtube';
         id = match[1];
+        
+        // Abort for playlist embeds; we can't determine the thumbnail for those
+        if (id.indexOf('videoseries') == 0) {
+          return;
+        }
       }
       
       // If the embed is of an unknown type, do nothing
