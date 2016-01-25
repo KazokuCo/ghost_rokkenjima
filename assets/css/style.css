@@ -1792,17 +1792,47 @@ blockquote.twitter-tweet p {
 
 /* -- YouTube Videos -- */
 
-article .video {
+article .video, .post .video {
   position: relative;
   padding-bottom: 56.25%;
-  padding-top: 30px;
   height: 0;
   overflow: hidden;
 }
-article .video iframe, article .video object, article .video embed {
+article .video-43, .post .video-43 {
+  padding-bottom: 75%;
+}
+article .video > *, .post .video > * {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  margin: 0;
+}
+
+.video .video-thumb {
+  background-size: cover;
+  background-position: center;
+}
+.video .video-thumb div {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.video .video-thumb div span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 40px;
+  color: rgba(50,50,50,0.85);
+  text-shadow: 0 0 20px #fff;
+  transition: color 0.1s;
+}
+.video .video-thumb-maxres div span {
+  font-size: 60px;
+}
+.video .video-thumb:hover div span {
+  color: #cc181e;
 }

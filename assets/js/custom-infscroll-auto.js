@@ -99,6 +99,8 @@
           container.isotope('appended', $(newElements));
           container.isotope('layout');
         });
+        
+        $(newElements).find('.video').videoThumbs();
       });
     });
     container.isotope('layout');
@@ -130,6 +132,14 @@
       delay: 300,
       speed: 'fast'
     });
+  });
+  
+  
+  
+  // Lazy Youtube embeds
+  $(document).ready(function() {
+    $('.blogitems .video').videoThumbs();
+    $('article .video').videoThumbs({ maxres: true });
   });
 
 })(jQuery);
