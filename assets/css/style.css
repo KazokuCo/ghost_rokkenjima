@@ -1709,7 +1709,8 @@ article, .prevnext, .author-wrap {
 }
 
 .comment {
-    background-color: #fcfcff;
+  background-color: #fff;
+  padding: 0;
 }
 
 .tag-title {
