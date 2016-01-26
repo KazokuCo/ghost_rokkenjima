@@ -1674,17 +1674,6 @@ h1 {
   text-align: justify;
 }
 
-@media only screen and (max-width: 767px) {
-  h1 {
-    font-size: 28px;
-  }
-  
-  .content p, .content li {
-    font-size: 14px;
-    text-align: left;
-  }
-}
-
 .postcontent {
   max-width: 750px;
   margin: auto;
@@ -1709,6 +1698,21 @@ article, .prevnext, .author-wrap {
 
 .tag-title {
     padding-top: 80px;
+}
+
+@media only screen and (max-width: 40.063em) {
+  h1 {
+    font-size: 28px;
+  }
+  
+  .content p, .content li {
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  article .postcontent {
+    padding: 10px;
+  }
 }
 
 /* -- Share Buttons -- */
