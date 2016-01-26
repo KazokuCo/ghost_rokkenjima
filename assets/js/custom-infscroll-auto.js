@@ -139,7 +139,10 @@
   // Lightboxes for galleries
   
   $(document).ready(function() {
-    $('.gallery img').css('cursor', 'pointer').featherlight({ targetAttr: 'src' });
+    $('.gallery img').css('cursor', 'pointer').featherlightGallery({
+      targetAttr: 'src',
+      galleryFadeOut: 0,
+    });
   });
 
 })(jQuery);
