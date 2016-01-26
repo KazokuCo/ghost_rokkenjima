@@ -1813,7 +1813,7 @@ article .video > *, .post .video > * {
 
 .video .video-thumb {
   background-color: #000;
-  background-size: contain;
+  background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
   text-decoration: none;
