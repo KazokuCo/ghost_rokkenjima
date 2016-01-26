@@ -58,14 +58,20 @@
           <div class="small-12 columns">
 
             {{#if author.image}}
-            <img src="{{author.image}}" alt="{{author.name}}" class="alignleft"/>
+            <div class="author-image">
+              <img src="{{author.image}}" alt="{{author.name}}" />
+            </div>
             {{/if}}
 
-            <h5>{{author.name}} {{#if author.website}}<span>- <a href="{{author.website}}" target="_blank">{{author.website}}</a></span>{{/if}}</h5>
+            <div class="author-info">
+              <h5>{{author.name}}</h5>
 
-            {{#if author.bio}}
-            <p>{{author.bio}}</p>
-            {{/if}}
+              {{#if author.bio}}
+              <p>{{author.bio}}</p>
+              {{/if}}
+              
+              <p>{{#if author.website}}<span><a href="{{author.website}}" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></span>{{/if}}</p>
+            </div>
 
           </div>
         </div>
