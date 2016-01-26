@@ -1704,6 +1704,9 @@ article, .prevnext, .author-wrap {
 .author-wrap .author-info h5 {
   margin-top: 0;
 }
+.author-wrap .author-info p:last-child {
+  margin-bottom: 0;
+}
 
 .comment {
     background-color: #fcfcff;
