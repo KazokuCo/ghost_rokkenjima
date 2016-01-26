@@ -133,5 +133,13 @@
       speed: 'fast'
     });
   });
+  
+  
+  
+  // Lightboxes for galleries
+  
+  $(document).ready(function() {
+    $('.gallery img').css('cursor', 'pointer').featherlight({ targetAttr: 'src' });
+  });
 
 })(jQuery);
