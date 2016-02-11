@@ -1662,6 +1662,18 @@ blockquote p {
   width: 100%;
 }
 
+/* -- Searches -- */
+
+.gsc-control-cse, .gsc-control-cse .gsc-table-result {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 14px !important;
+}
+
+.gsc-control-cse table {
+  margin-bottom: 0;
+  border: none;
+}
+
 /* -- Home Page -- */
 
 .content.blogpagesection p, .content.blogpagesection li {
