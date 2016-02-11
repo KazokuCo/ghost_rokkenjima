@@ -1903,7 +1903,6 @@ article .video > *, .post .video > * {
   vertical-align: middle;
   font-size: 40px;
   color: rgba(50,50,50,0.85);
-  text-shadow: 0 0 20px #fff;
   transition: color 0.1s;
 }
 .video .video-thumb-maxres .play span {
