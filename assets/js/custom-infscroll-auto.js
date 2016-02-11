@@ -144,5 +144,17 @@
       galleryFadeOut: 0,
     });
   });
+  
+  
+  
+  // Preserve the search query
+  
+  $(document).ready(function() {
+    window.location.search.substring(1).split('&').forEach(function(q) {
+      if (q.indexOf('q=') == 0) {
+        $('.search-container input').val(q.substring(2));
+      }
+    });
+  });
 
 })(jQuery);
