@@ -126,6 +126,12 @@
 
     <div class="row">
       <div class="small-12 columns">
+        <div class="small-12 medium-6 large-4 search-container">
+          <form class="search-form" action="/search">
+            <input type="text" name="q" placeholder="Search..." />
+          </form>
+        </div>
+        
         {{#if @blog.logo}}
         <div class="logo">
           <a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a>
