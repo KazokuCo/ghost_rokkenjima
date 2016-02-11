@@ -1650,7 +1650,7 @@ blockquote p {
 .header .search-container input {
   float: right;
   width: 150px;
-  border-radius: 10px;
+  border-radius: 3px;
   padding: 10px;
   outline: none;
   opacity: 0.5;
