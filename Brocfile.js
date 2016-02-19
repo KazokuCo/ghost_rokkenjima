@@ -11,13 +11,14 @@ images = Funnel(images, { destDir: 'images' });
 var fonts = 'src/fonts';
 fonts = Funnel(fonts, { destDir: 'fonts' });
 
-var css = 'src/css';
+var vendor_css = Funnel('bower_components', { destDir: 'bower_components', include: ['*.css'] });
+var css = mergeTrees(['src/css', vendor_css]);
 css = compileLESS(css, { paths: ['src/css'] });
 css = cleanCSS(css, {
   processImport: true,
   processImportFrom: ['!fonts.googleapis.com']
 });
-css = Funnel(css, { destDir: 'css' });
+css = Funnel(css, { destDir: 'css', exclude: ['bower_components/*'] });
 
 var vendor_js = Funnel('bower_components', { destDir: 'bower_components' });
 vendor_js = concat(vendor_js, {
