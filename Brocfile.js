@@ -26,6 +26,16 @@ vendor_js = concat(vendor_js, {
     'bower_components/jquery/dist/jquery.js',
     'bower_components/featherlight/src/featherlight.js',
     'bower_components/featherlight/src/featherlight.gallery.js',
+    'bower_components/jquery-hoverintent/jquery.hoverIntent.js',
+    'bower_components/superfish/dist/js/superfish.js',
+    'bower_components/slicknav/jquery.slicknav.js',
+    'bower_components/isotope/dist/isotope.pkgd.js',
+    'bower_components/imagesloaded/imagesloaded.pkgd.js',
+    'bower_components/conditionizr/dist/conditionizr.js',
+    'bower_components/conditionizr/detects/safari.js',
+    'bower_components/conditionizr/detects/windows.js',
+    'bower_components/jquery-infinite-scroll/jquery.infinitescroll.js',
+    'bower_components/jquery-infinite-scroll/behaviors/manual-trigger.js',
   ],
   inputFiles: [],
   allowNone: true,
@@ -39,20 +49,10 @@ js = concat(js_src, {
   // footer: "})();",
   headerFiles: [
     'lib/video-thumbs.js',
-    'vendor/hoverIntent.js',
-    'vendor/superfish.js',
-    'vendor/jquery.slicknav.js',
-    'vendor/isotope.pkgd.js',
-    'vendor/imagesloaded.pkgd.js',
-    'vendor/conditionizr.js',
-    // 'vendor/safari.js',
-    // 'vendor/windows.js',
-    'vendor/jquery.infinitescroll.js',
-    'vendor/manual-trigger.js',
   ],
-  inputFiles: [],
-  footerFiles: ['custom-infscroll-auto.js'],
-  allowNone: true,
+  inputFiles: [
+    'custom-infscroll-auto.js'
+  ],
 });
 js = uglifyJS(js);
 js = mergeTrees([js, js_src, vendor_js]);
