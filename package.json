@@ -1,14 +1,26 @@
 {
   "name": "Monologue",
-  "version": "1.3",
-  "description" : "Responsive Ghost Theme",
-  "author" : "Audemedia",
-  "homepage" : "http://audemedia.com",
-  "keywords" : [
-        "ghost",
-        "blog",
-        "masonry",
-        "responsive",
-        "infinitescroll"
-    ]
+  "version": "1.3.0",
+  "description": "Responsive Ghost Theme",
+  "author": "Audemedia",
+  "homepage": "http://audemedia.com",
+  "keywords": [
+    "ghost",
+    "blog",
+    "masonry",
+    "responsive",
+    "infinitescroll"
+  ],
+  "devDependencies": {
+    "broccoli": "^0.16.9",
+    "broccoli-clean-css": "^1.1.0",
+    "broccoli-funnel": "^1.0.1",
+    "broccoli-merge-trees": "^1.1.1",
+    "broccoli-uglify-js": "^0.1.3"
+  },
+  "dependencies": {
+    "broccoli-concat": "^2.1.0",
+    "broccoli-less": "^2.1.0",
+    "broccoli-sass": "^0.7.0"
+  }
 }

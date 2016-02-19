@@ -2,6 +2,10 @@
   "use strict";
 
   $(".paging.manualtrigger .moreprevious").css("visibility","hidden");
+  
+  // Video thumbnails
+  $('.blogitems .video').videoThumbs();
+  $('article .video').videoThumbs({ maxres: true });
 
 
 
