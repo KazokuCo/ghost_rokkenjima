@@ -1,6 +1,7 @@
 var Funnel = require('broccoli-funnel');
 var compileLESS = require('broccoli-less');
 var cleanCSS = require('broccoli-clean-css');
+var uglifyJS = require('broccoli-uglify-js');
 var concat = require('broccoli-concat');
 var mergeTrees = require('broccoli-merge-trees');
 
@@ -19,7 +20,7 @@ css = cleanCSS(css, {
 css = Funnel(css, { destDir: 'css' });
 
 var js = 'src/js';
-js = mergeTrees([js, concat(js, {
+js_ = concat(js, {
   outputFile: 'script.js',
   // header: ";(function() {",
   // footer: "})();",
@@ -39,7 +40,9 @@ js = mergeTrees([js, concat(js, {
   inputFiles: [],
   footerFiles: ['custom-infscroll-auto.js'],
   allowNone: true,
-})]);
+});
+js_ = uglifyJS(js_);
+js = mergeTrees([js, js_]);
 js = Funnel(js, { destDir: 'js' });
 
 module.exports = mergeTrees([images, fonts, css, js]);
