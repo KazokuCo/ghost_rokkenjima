@@ -5,8 +5,6 @@ var uglifyJS = require('broccoli-uglify-js');
 var concat = require('broccoli-concat');
 var mergeTrees = require('broccoli-merge-trees');
 
-var bower = Funnel('bower_components', { destDir: 'bower_components' });
-
 var images = 'src/images';
 images = Funnel(images, { destDir: 'images' });
 
@@ -21,15 +19,25 @@ css = cleanCSS(css, {
 });
 css = Funnel(css, { destDir: 'css' });
 
-var js = 'src/js';
-js_ = concat(mergeTrees([js, bower]), {
-  outputFile: 'script.js',
-  // header: ";(function() {",
-  // footer: "})();",
+var vendor_js = Funnel('bower_components', { destDir: 'bower_components' });
+vendor_js = concat(vendor_js, {
+  outputFile: 'vendor.js',
   headerFiles: [
     'bower_components/jquery/dist/jquery.js',
     'bower_components/featherlight/src/featherlight.js',
     'bower_components/featherlight/src/featherlight.gallery.js',
+  ],
+  inputFiles: [],
+  allowNone: true,
+});
+vendor_js = uglifyJS(vendor_js);
+
+var js_src = 'src/js';
+js = concat(js_src, {
+  outputFile: 'script.js',
+  // header: ";(function() {",
+  // footer: "})();",
+  headerFiles: [
     'lib/video-thumbs.js',
     'vendor/hoverIntent.js',
     'vendor/superfish.js',
@@ -46,8 +54,8 @@ js_ = concat(mergeTrees([js, bower]), {
   footerFiles: ['custom-infscroll-auto.js'],
   allowNone: true,
 });
-js_ = uglifyJS(js_);
-js = mergeTrees([js, js_]);
-js = Funnel(js, { destDir: 'js', exclude: ['bower_components'] });
+js = uglifyJS(js);
+js = mergeTrees([js, js_src, vendor_js]);
+js = Funnel(js, { destDir: 'js' });
 
 module.exports = mergeTrees([images, fonts, css, js]);
