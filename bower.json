@@ -32,6 +32,7 @@
     "isotope": "^2.2.2",
     "imagesloaded": "^4.1.0",
     "conditionizr": "^4.5.1",
-    "jquery-infinite-scroll": "^2.1.0"
+    "jquery-infinite-scroll": "^2.1.0",
+    "modernizr": "components-modernizr#^2.8.3"
   }
 }

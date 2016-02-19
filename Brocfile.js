@@ -24,6 +24,7 @@ vendor_js = concat(vendor_js, {
   outputFile: 'vendor.js',
   headerFiles: [
     'bower_components/jquery/dist/jquery.js',
+    'bower_components/modernizr/modernizr.js',
     'bower_components/featherlight/src/featherlight.js',
     'bower_components/featherlight/src/featherlight.gallery.js',
     'bower_components/jquery-hoverintent/jquery.hoverIntent.js',
