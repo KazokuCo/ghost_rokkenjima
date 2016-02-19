@@ -5,6 +5,8 @@ var uglifyJS = require('broccoli-uglify-js');
 var concat = require('broccoli-concat');
 var mergeTrees = require('broccoli-merge-trees');
 
+var bower = Funnel('bower_components', { destDir: 'bower_components' });
+
 var images = 'src/images';
 images = Funnel(images, { destDir: 'images' });
 
@@ -20,11 +22,14 @@ css = cleanCSS(css, {
 css = Funnel(css, { destDir: 'css' });
 
 var js = 'src/js';
-js_ = concat(js, {
+js_ = concat(mergeTrees([js, bower]), {
   outputFile: 'script.js',
   // header: ";(function() {",
   // footer: "})();",
   headerFiles: [
+    'bower_components/jquery/dist/jquery.js',
+    'bower_components/featherlight/src/featherlight.js',
+    'bower_components/featherlight/src/featherlight.gallery.js',
     'lib/video-thumbs.js',
     'vendor/hoverIntent.js',
     'vendor/superfish.js',
@@ -43,6 +48,6 @@ js_ = concat(js, {
 });
 js_ = uglifyJS(js_);
 js = mergeTrees([js, js_]);
-js = Funnel(js, { destDir: 'js' });
+js = Funnel(js, { destDir: 'js', exclude: ['bower_components'] });
 
 module.exports = mergeTrees([images, fonts, css, js]);
