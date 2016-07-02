@@ -86,7 +86,7 @@
         maxPage: parseInt($(this).data('max-page')),
         loading: {
           finishedMsg: 'ALL POSTS LOADED',
-          img: '/assets/images/chibimoth_loading.gif',
+          img: '/assets/images/ring.gif',
           msg: null,
           msgText: '',
         },
